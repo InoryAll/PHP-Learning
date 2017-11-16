@@ -52,21 +52,21 @@
 	<body>
 		<form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
 			<div>
-				Name: <input type="text" name="name">
+				Name: <input type="text" name="name" value="<?php echo $name ?>">
 				<span><?php echo $nameErr ?></span>
 			</div>
 			<div>
-				E-mail: <input type="text" name="email">
+				E-mail: <input type="text" name="email" value="<?php echo $email ?>">
 				<span><?php echo $emailErr ?></span>
 			</div>
 			<div>
-				Website: <input type="text" name="url">
+				Website: <input type="text" name="url" value="<?php echo $url ?>">
 				<span><?php echo $urlErr ?></span>
 			</div>
 			<div>
 				Gender:
-				<input type="radio" name="gender" value="female">female
-				<input type="radio" name="gender" value="male">male
+				<input type="radio" <?php if(isset($gender) && $gender == 'female') { echo 'checked'; } ?> name="gender" value="female">female
+				<input type="radio" <?php if(isset($gender) && $gender == 'male') { echo 'checked'; } ?> name="gender" value="male">male
 				<span><?php echo $genderErr ?></span>
 			</div>
 			<input type="submit">
