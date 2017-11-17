@@ -22,4 +22,15 @@
 	$d = strtotime("+3 Months");
 	echo date('Y-m-d h:i:sa', $d).'<br />';
 
+	$startDate = strtotime("Saturday");
+	$endDate = strtotime('+6 Weeks', $startDate);
+	while ($startDate < $endDate) {
+		echo date('M d', $startDate).'<br />';
+		$startDate = strtotime('+1 Week', $startDate);
+	}
+
+	$d1 = strtotime("December 31");
+	$d2 = ceil(($d1-time())/60/60/24);
+	echo "距离12.31还有:".$d2."天";
+
 ?>
