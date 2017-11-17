@@ -12,4 +12,14 @@
 
 	$d = strtotime("10:38pm April 15 2015");
 	echo "创建的日期是".date('Y-m-d h:i:sa', $d).'<br />';
+
+	$d = strtotime("tomorrow");
+	echo date('Y-m-d h:i:sa', $d).'<br />';
+
+	$d = strtotime("next Saturday");
+	echo date('Y-m-d h:i:sa', $d).'<br />';
+
+	$d = strtotime("+3 Months");
+	echo date('Y-m-d h:i:sa', $d).'<br />';
+
 ?>
